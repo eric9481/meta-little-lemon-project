@@ -1,8 +1,18 @@
-import './App.css';
+import "./App.css";
+import Header from "./components/Header";
+import Nav from "./components/Nav";
+import Main from "./components/Main";
+import Footer from "./components/Footer";
+import { Flex, Container, HStack } from "@chakra-ui/react";
 
 function App() {
   return (
-    <div className='App'>Test</div>
+    <>
+      <Header />
+      <Nav />
+      <Main />
+      <Footer />
+    </>
   );
 }
 
