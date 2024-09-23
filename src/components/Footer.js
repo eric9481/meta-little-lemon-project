@@ -5,7 +5,7 @@ import Logo from '../assets/logo.svg'
 const Footer = () => {
 
   return (
-      <Box as='footer' display='flex' justifyContent='space-between'>
+      <Box as='footer' display='flex' gap={20}>
         <Image src={Logo} />
         <List>
           <ListItem><Link>Home</Link></ListItem>

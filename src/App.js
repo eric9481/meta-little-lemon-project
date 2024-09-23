@@ -3,13 +3,12 @@ import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
-import { Flex, Container, HStack } from "@chakra-ui/react";
+import { Flex, Container, HStack, Box, Spacer, Center } from "@chakra-ui/react";
 
 function App() {
   return (
     <>
       <Header />
-      <Nav />
       <Main />
       <Footer />
     </>
