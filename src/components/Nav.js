@@ -1,5 +1,5 @@
 import React from "react";
-import { List, ListItem, UnorderedList, Link, HStack, Box, Text, Container } from "@chakra-ui/react";
+import { List, ListItem, Link, Box } from "@chakra-ui/react";
 
 const Nav = () => {
   return (

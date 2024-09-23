@@ -1,24 +1,17 @@
 import React from "react";
-import { Image, Flex, Spacer } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
 import Logo from "../assets/logo.svg";
 import Container from "./Container";
 import Nav from "./Nav";
+import FlexContainer from "./FlexContainer";
 
 const Header = () => {
   return (
     <Container color="none">
-      <Flex
-        as="Header"
-        maxWidth="800px"
-        marginX="auto"
-        paddingY={2}
-        alignItems="center"
-        justifyContent="space-between"
-      >
+      <FlexContainer type="header">
         <Image src={Logo} />
-
         <Nav />
-      </Flex>
+      </FlexContainer>
     </Container>
   );
 };
