@@ -9,7 +9,7 @@ const Header = () => {
   return (
     <Flex
       as='header'
-      maxWidth="800px"
+      maxWidth="860px"
       marginX="auto"
       paddingY={2}
       alignItems='center'

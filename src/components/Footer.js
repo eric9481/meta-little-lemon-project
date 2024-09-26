@@ -9,7 +9,7 @@ const Footer = () => {
     <Box maxWidth="100%" bg="green.800">
       <Flex
         as="footer"
-        maxWidth="800px"
+        maxWidth="860px"
         marginX="auto"
         paddingY={2}
         alignItems='center'
