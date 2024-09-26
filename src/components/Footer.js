@@ -6,41 +6,50 @@ import FlexContainer from "./FlexContainer";
 
 const Footer = () => {
   return (
-    <Container color="green.800">
-      <FlexContainer type="footer">
+    <Box maxWidth="100%" bg="green.800">
+      <Flex
+        as="footer"
+        maxWidth="800px"
+        marginX="auto"
+        paddingY={2}
+        alignItems='center'
+        justifyContent="space-between"
+      >
         <Image src={Logo} />
-        <List>
-          <ListItem>
-            <Link>Home</Link>
-          </ListItem>
-          <ListItem>
-            <Link>About</Link>
-          </ListItem>
-          <ListItem>
-            <Link>Menu</Link>
-          </ListItem>
-          <ListItem>
-            <Link>Reservations</Link>
-          </ListItem>
-          <ListItem>
-            <Link>Order Online</Link>
-          </ListItem>
-          <ListItem>
-            <Link>Login</Link>
-          </ListItem>
-        </List>
-        <List>
-          <ListItem>Address</ListItem>
-          <ListItem>Phone Number</ListItem>
-          <ListItem>Email</ListItem>
-        </List>
-        <List>
-          <ListItem>Address</ListItem>
-          <ListItem>Phone Number</ListItem>
-          <ListItem>Email</ListItem>
-        </List>
-      </FlexContainer>
-    </Container>
+        <Flex gap={20}>
+          <List>
+            <ListItem>
+              <Link>Home</Link>
+            </ListItem>
+            <ListItem>
+              <Link>About</Link>
+            </ListItem>
+            <ListItem>
+              <Link>Menu</Link>
+            </ListItem>
+            <ListItem>
+              <Link>Reservations</Link>
+            </ListItem>
+            <ListItem>
+              <Link>Order Online</Link>
+            </ListItem>
+            <ListItem>
+              <Link>Login</Link>
+            </ListItem>
+          </List>
+          <List>
+            <ListItem>Address</ListItem>
+            <ListItem>Phone Number</ListItem>
+            <ListItem>Email</ListItem>
+          </List>
+          <List>
+            <ListItem>Address</ListItem>
+            <ListItem>Phone Number</ListItem>
+            <ListItem>Email</ListItem>
+          </List>
+        </Flex>
+      </Flex>
+    </Box>
   );
 };
 
