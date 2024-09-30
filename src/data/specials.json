@@ -1,0 +1,20 @@
+[
+    {
+      "title": "Greek Salad",
+      "price": 12.99,
+      "text": "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. ",
+      "image": "../assets/greek salad.jpg"
+    },
+    {
+      "title": "Greek Salad",
+      "price": 12.99,
+      "text": "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. ",
+      "image": "../assets/greek salad.jpg"
+    },
+    {
+      "title": "Greek Salad",
+      "price": 12.99,
+      "text": "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons. ",
+      "image": "../assets/greek salad.jpg"
+    }
+  ]
