@@ -3,6 +3,8 @@ import React from 'react'
 import CallToAction from './CallToAction'
 import Specials from './Specials'
 import CardComp from './CardComp'
+import CardTestimonial from './CardTestimonial'
+import Testimonials from './Testimonials'
 
 
 const Main = () => {
@@ -10,6 +12,7 @@ const Main = () => {
     <Box as='main'>
       <CallToAction />
       <Specials />
+      <Testimonials />
     </Box>
   )
 }
