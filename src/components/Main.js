@@ -5,6 +5,7 @@ import Specials from './Specials'
 import CardComp from './CardComp'
 import CardTestimonial from './CardTestimonial'
 import Testimonials from './Testimonials'
+import Chicago from './Chicago'
 
 
 const Main = () => {
@@ -13,6 +14,7 @@ const Main = () => {
       <CallToAction />
       <Specials />
       <Testimonials />
+      <Chicago />
     </Box>
   )
 }
