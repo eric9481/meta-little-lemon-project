@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Heading, Flex, Image, Text, Link, Button } from "@chakra-ui/react";
+import { Link as ReactRouterLink } from 'react-router-dom'
 import food from "../assets/restauranfoodfixed.jpg";
 
 const CallToAction = () => {
@@ -36,7 +37,7 @@ const CallToAction = () => {
             We are a family owned Mediterranean restaurant, focused on
             traditional recipes served with a modern twist.
           </Text>
-          <Button bg='brand.200' marginTop='3rem' size='lg'>Reserve a Table</Button>
+          <Button as={ReactRouterLink} to='/bookings' bg='brand.200' marginTop='3rem' size='lg'>Reserve a Table</Button>
         </Box>
         <Image src={food} boxSize="md" borderRadius="16px" />
       </Flex>

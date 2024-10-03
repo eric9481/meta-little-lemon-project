@@ -31,7 +31,7 @@ const Testimonials = () => {
           textAlign="center"
           marginBottom={10}
           fontWeight="500"
-          fontSize="3rem"
+          fontSize="4rem"
           color='brand.300'
         >
           Testimonials

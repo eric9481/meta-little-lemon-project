@@ -1,9 +1,10 @@
 import React from "react";
-import { Image, Flex } from "@chakra-ui/react";
+import { Image, Flex, Link } from "@chakra-ui/react";
 import Logo from "../assets/logo.svg";
 import Container from "./Container";
 import Nav from "./Nav";
 import FlexContainer from "./FlexContainer";
+import { Link as ReactRouterLink } from 'react-router-dom'
 
 const Header = () => {
   return (
@@ -15,7 +16,9 @@ const Header = () => {
       alignItems='center'
       justifyContent="space-between"
     >
-      <Image src={Logo} />
+      <Link as={ReactRouterLink} to='/'>
+      <Image src={Logo}/>      
+      </Link>
       <Nav />
     </Flex>
   );

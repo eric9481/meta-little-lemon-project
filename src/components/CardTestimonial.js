@@ -21,6 +21,7 @@ import {
   const CardComp = ({testimonial}) => {
     return (
       <Card
+        as='article'
         borderRadius="16px"
         width="200px"
       >

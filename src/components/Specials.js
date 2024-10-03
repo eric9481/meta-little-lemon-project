@@ -46,7 +46,7 @@ const Specials = () => {
         paddingY={14}
       >
         <Flex justifyContent='space-between' alignItems='center' marginBottom={10}>
-          <Heading as='h2' fontWeight='400' fontSize='3.3rem' >Specials</Heading>
+          <Heading as='h2' fontWeight='400' fontSize='4rem' >Specials</Heading>
           <Button bg='brand.200' size='lg'>Online Menu</Button>
         </Flex>
 

@@ -18,7 +18,7 @@ import { MdDeliveryDining } from "react-icons/md";
 
 const CardComp = ({ data }) => {
   return (
-    <Card
+    <Card as='article'
       borderRadius="16px"
       overflow="hidden"
       maxWidth="264px"
