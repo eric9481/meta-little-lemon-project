@@ -15,7 +15,7 @@ import {
 import React, { useState } from "react";
 import BookingPage from "./BookingPage";
 
-const BookingForm = ({ availableTimes, dispatch }) => {
+const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
   const marg = 6;
 
   const [date, setDate] = useState("");
@@ -31,7 +31,8 @@ const BookingForm = ({ availableTimes, dispatch }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ date, times, guests, option });
+    const formData = { date, times, guests, option };
+    submitForm(formData)
   };
 
   return (

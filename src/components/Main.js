@@ -6,13 +6,15 @@ import CardComp from './CardComp'
 import CardTestimonial from './CardTestimonial'
 import Testimonials from './Testimonials'
 import Chicago from './Chicago'
-import { Route, Routes, } from 'react-router-dom'
+import { Route, Routes, useNavigate, } from 'react-router-dom'
 import Homepage from './Homepage'
 import BookingPage from './BookingPage'
 import Menu from './Menu'
 import OrderOnline from './OrderOnline'
 import Login from './Login'
 import BookingForm from './BookingForm'
+import ConfirmedBooking from './ConfirmedBooking'
+import { Navigate } from 'react-router-dom'
 
 const seededRandom = function (seed) {
   var m = 2**35 - 31;
@@ -63,15 +65,25 @@ const Main = () => {
 
   const [availableTimes, dispatch] = useReducer(updateTimes, [], initializeTimes);
 
+  const navigate = useNavigate()
+
+  const submitForm = (formData) => {
+    const isSubmitted = submitAPI(formData);
+    if (isSubmitted) {
+      navigate('/bookings/confirmed')
+    }
+    }
+
   return (
     <Box as='main'>
       
         <Routes>
           <Route path='/' element={<Homepage />} />
-          <Route path='/bookings' element={<BookingForm availableTimes={availableTimes} dispatch={dispatch} />} />
+          <Route path='/bookings' element={<BookingForm availableTimes={availableTimes} dispatch={dispatch} submitForm={submitForm} />} />
           <Route path='/menu' element={<Menu />} />
           <Route path='/order' element={<OrderOnline />} />
           <Route path='/login' element={<Login />} />
+          <Route path='/bookings/confirmed' element={<ConfirmedBooking />} />
         </Routes>
       
     </Box>
