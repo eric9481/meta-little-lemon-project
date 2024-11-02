@@ -25,6 +25,10 @@ test('initializeTimes returns expected value', () => {
         "19:30",
         "20:00",
         "20:30",
+        "21:00",
+        "21:30",
+        "22:00",
+        "23:30",
     ];
     fetchAPI.mockReturnValue(mockTimes);
 
@@ -43,6 +47,10 @@ test('updateTimes returns updated times based on the action date', () => {
         "19:30",
         "20:00",
         "20:30",
+        "21:00",
+        "21:30",
+        "22:00",
+        "23:30",
     ];
     fetchAPI.mockReturnValue(mockTimes);
 

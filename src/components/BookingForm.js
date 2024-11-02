@@ -20,7 +20,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
 
   const [date, setDate] = useState("");
   const [times, setTimes] = useState("");
-  const [guests, setGuests] = useState("");
+  const [guests, setGuests] = useState("1");
   const [option, setOption] = useState("");
 
   const handleDateChange = (event) => {
@@ -32,8 +32,12 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const formData = { date, times, guests, option };
-    submitForm(formData)
+    submitForm(formData);
   };
+
+  const isFormValid = () => {
+    return date !== "" && times !== "" && guests >= 1 && option !=="";
+  }
 
   return (
     <>
@@ -49,13 +53,14 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
         >
           <FormControl marginBottom={marg}>
             <FormLabel>Choose date</FormLabel>
-            <Input type="date" onChange={handleDateChange}></Input>
+            <Input type="date" onChange={handleDateChange} required></Input>
           </FormControl>
           <FormControl marginBottom={marg}>
             <FormLabel>Choose Time</FormLabel>
             <Select
               placeholder="Select a time"
               onChange={(e) => setTimes(e.target.value)}
+              required
             >
               {availableTimes.map((time) => (
                 <option key={time}>{time}</option>
@@ -82,6 +87,7 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
             <Select
               placeholder="Select an option"
               onChange={(e) => setOption(e.target.value)}
+              required
             >
               <option>Birthday</option>
               <option>Anniversary</option>
@@ -89,7 +95,13 @@ const BookingForm = ({ availableTimes, dispatch, submitForm }) => {
             </Select>
           </FormControl>
           <Center>
-            <Button type="submit" bg="brand.200" size="md">
+            <Button
+              disabled={!isFormValid()}
+              type="submit"
+              bg={isFormValid() ? 'brand.200' : 'brand.300'}
+              size="md"
+              aria-label="On Click"
+            >
               Make Your Reservation
             </Button>
           </Center>
